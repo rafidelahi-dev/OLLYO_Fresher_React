@@ -1,0 +1,61 @@
+/* src/components/ImageCard.css */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+.image-card.selected {
+  border: 2px solid black;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.2s ease-in-out;
+}
+
+.image-card:hover .image {
+  filter: brightness(80%);
+}
+
+.image-card.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.checkbox,
+.feature-button {
+  display: none;
+}
+
+.image-card:hover .checkbox,
+.image-card:hover .feature-button {
+  display: block;
+}
+
+.checkbox {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: 25px;
+  width: 25px;
+}
+.checkbox.selected {
+  display: block;
+}
+
+.feature-button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}

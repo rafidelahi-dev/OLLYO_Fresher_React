@@ -1,0 +1,28 @@
+For Front End
+npm create vite@latest
+...
+...
+...
+cd 'your file name for client-side
+npm install
+npm run dev
+
+For Back End
+npm init -y
+npm install express nodemon
+npm run start
+
+For app.jsx
+1. Remove assets Folder
+2.import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <h1>Hello</h1>
+  )
+}
+
+export default App
